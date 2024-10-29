@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazaj Imports</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="image/bazaj imports.jpg" alt="Bazaj Imports Logo" class="logo" />
+            <h1 class="logo-text">Bazaj Imports</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#add-cars">Add Cars</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-options">
+            <input type="text" placeholder="Search..." class="search-input" />
+            <button class="cart-button">🛒 Cart</button>
+        </div>
+    </header>
+    
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="image/bazaj info 1.jpg" alt="Bazaj" class="carousel-image">
+                <img src="image/bazaj info.jpg" alt="Bazaj 1" class="carousel-image">
+                <img src="image/bazaj info 2.jpg" alt="Bazaj 2" class="carousel-image">
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+    <main>
+
+
+        <section id="home" class="home-section">
+            <h2>Welcome to Our Car Sales</h2>
+            <p>Bringing Japan's finest cars to Pakistan. 🚗 Your go-to source for quality imports.</p>
+            <p class="tagline">Contact us for finding your Dream Car!</p>
+            <div class="cta-container">
+                <button class="explore-button">Explore Cars</button>
+            </div>
+        </section>        
+        
+        <section id="cars">
+            <h2>Available Cars</h2>
+        <div class="car-list">
+            <!-- Existing car cards -->
+            <div class="car-item card">
+                <h3>Nissan Note</h3>
+                <div class="car-images">
+                    <img src="image/note1.jpg" alt="Nissan Note" class="car-image">
+                </div>
+                <p class="price">Price: PKR 75 Lak</p>
+                <button class="contact-button" onclick="contactSeller('Nissan Note')">Contact Seller</button>
+            </div>
+            <div class="car-item card">
+                <h3>Toyota Sienta</h3>
+                <div class="car-images">
+                    <img src="image/sienta3.jpg" alt="Toyota Sienta" class="car-image">
+                </div>
+                <p class="price">Price: PKR 60 Lak</p>
+                <button class="contact-button" onclick="contactSeller('Toyota Sienta')">Contact Seller</button>
+            </div>
+            <div class="car-item card">
+                <h3>Toyota Touring</h3>
+                <div class="car-images">
+                    <img src="image/touring.jpg" alt="Toyota Touring" class="car-image">
+                </div>
+                <p class="price">Price: PKR 89 Lak</p>
+                <button class="contact-button" onclick="contactSeller('Toyota Touring')">Contact Seller</button>
+            </div>
+            
+            <!-- New car cards -->
+            <div class="car-item card">
+                <h3>Dihatsu Rocky</h3>
+                <div class="car-images">
+                    <img src="image/rocky.jpg" alt="Dihatsu Rocky" class="car-image">
+                </div>
+                <p class="price">Price: PKR 85 Lak</p>
+                <button class="contact-button" onclick="contactSeller('Dihatsu Rocky')">Contact Seller</button>
+            </div>
+            <div class="car-item card">
+                <h3>Toyota Prius</h3>
+                <div class="car-images">
+                    <img src="image/priuso.jpg" alt="Toyota Prius" class="car-image">
+                </div>
+                <p class="price">Price: PKR 41 Lak</p>
+                <button class="contact-button" onclick="contactSeller('Hyundai Elantra')">Contact Seller</button>
+            </div>
+            <div class="car-item card">
+                <h3>Suzuki Alto</h3>
+                <div class="car-images">
+                    <img src="image/alto.jpg" alt="alto" class="car-image">
+                </div>
+                <p class="price">Price: PKR 95 Lak</p>
+                <button class="contact-button" onclick="contactSeller('Kia Sportage')">Contact Seller</button>
+            </div>
+        </div>
+        
+
+        </section>
+        <div id="carModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2 id="modalCarName"></h2>
+                <div id="modalCarImage"></div>
+                <p id="modalCarPrice"></p>
+                <p id="modalCarDescription"></p>
+            </div>
+        </div>
+
+
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>
+                        At <strong>Bazaj Imports</strong>, we pride ourselves on delivering the finest Japanese vehicles to Pakistan. Our dedicated team is passionate about connecting you with your dream car, ensuring you receive unparalleled quality and service.
+                    </p>
+                    <h3>Our Mission</h3>
+                    <p>
+                        We strive to enhance the car-buying experience by offering a transparent, customer-centric approach. Your satisfaction is our top priority, and we aim to build lasting relationships based on trust and integrity.
+                    </p>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li><strong>Integrity:</strong> We believe in honest and transparent dealings ✓</li>
+                        <li><strong>Quality:</strong> Only the best vehicles for our customers ✓</li>
+                        <li><strong>Customer Focus:</strong> Your needs guide our service ✓</li>
+                    </ul>
+                </div>
+            </div>
+        
+
+            <div class="ceo-message">
+                <h3>Message From The CEO</h3>
+                <div class="ceo-content">
+                    <div class="ceo-image">
+                        <img src="image/hamza1.jpg" alt="CEO" />
+                    </div>
+                    <div class="ceo-text">
+                        <p>
+                            Welcome to Bazaj Imports! As the CEO, I take pride in our commitment to excellence. Our focus on quality and customer satisfaction ensures that you receive the highest standard of service and vehicles. We believe in forging lasting relationships built on trust and reliability. Thank you for choosing us as your trusted partner in finding your dream car!
+                        </p>
+                        <p><strong>— Muhammad Hamza Khan, CEO</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <section id="contact">
+            <h2 style="text-align: center; color: #333;">Contact Us</h2>
+            <div class="contact-form-container">
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Connect with Us</h3>
+                <p>If you have any questions, feel free to reach out!</p>
+                <p>Email: <a href="mailto:info@bazajimports.com">info@bazajimports.com</a></p>
+                <p>Phone: <a href="tel:+923319335791">+92 331 9335791</a></p>
+            </div>
+        </section>
+        
+        
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="image/bazaj imports.jpg" alt="Bazaj Imports Logo" class="footer-logo-image" />
+                <h1 class="footer-logo-text">Bazaj Imports</h1>
+            </div>
+            
+            </ul>
+            <div class="footer-contact">
+                <p>&copy; 2024 Bazaj Imports. All rights reserved.</p>
+                <p>Follow us on:</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61550054623257" target="">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+<script>
+    let currentSlide = 0; // Track the current slide
+    const slides = document.querySelectorAll('.carousel-image');
+
+    function showSlide(index) {
+        // Reset the index if it goes out of bounds
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        // Calculate offset
+        const offset = -currentSlide * 100;
+        document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+    }
+
+    function moveSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // Automatic slide change every 6 seconds
+    setInterval(() => {
+        moveSlide(1); // Move to the next slide
+    }, 6000); // 6000 milliseconds = 6 seconds
+
+    // Initialize the first slide
+    showSlide(currentSlide);
+</script>
